@@ -1,0 +1,53 @@
+﻿
+1) Karta 
+  - string NrKarty
+  - stirng Tytul 
+  - int Wydanie 
+  - DateTime DataZakupu 
+  - Karta Nastepna
+  - Karta Poprzednia 
+  - IEnumerable<Sygnatura> Sygnatury
+  - Cena Cena 
+  - IEnumerable<Autor> Autorzy
+
+2) Sygnatura 
+ - int NrSygnatury
+ - string Komentarz 
+ - IEnumerable<Wypozyczene> Wypozyczenia 
+ - bool Aktywna
+ - Karta Karta
+3) Cena 
+  - double Cena
+  - string Komentarz
+4) Czytelnik 
+ - string NrKarty 
+ - string Imie
+ - string Nazwisko
+ - IEnumerable<Wypozyczenie> 
+5) Autor
+ - string Imie
+ - string Nazwisko
+ - string DrugieImie 
+ - Karta Karta
+6) Wypozyczenie 
+ - Czytelnik Czytelnik 
+ - DateTime DataWypozyczenia
+ - DateTime DataPrzewidywanegoZwrotu
+ - DateTime DataRzczywistegoZwrotu 
+ - Sygnatura Sygnatura 
+ - string Uwagi 
+ - Wypozyczenie Wypozyczenie 
+ - double Kara
+
+ Płatne: 
+ EnterpiseArchitect 
+ LBLGEN 
+ Visual Paradigm
+
+ Bezpłatne
+ Wireflow
+ Modelio
+ NClass
+ Archi
+ UML Designer
+ Draw.io 
