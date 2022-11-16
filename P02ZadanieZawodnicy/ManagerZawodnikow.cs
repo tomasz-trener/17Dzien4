@@ -18,6 +18,8 @@ namespace P02ZadanieZawodnicy
            // set { blednieSformatowaneWiersze = value; }
         }
 
+        private Zawodnik[] zawodnicy;
+
 
         public Zawodnik[] WczytajZawodnikow()
         {
@@ -64,13 +66,14 @@ namespace P02ZadanieZawodnicy
                 zawodnicy.Add(z);
             }
 
-            return zawodnicy.ToArray();
+            this.zawodnicy = zawodnicy.ToArray();
+            return this.zawodnicy;
         }
 
 
         public int PodajLiczbeZawodnikow(string kraj)
         {
-            Zawodnik[] zawodnicy = WczytajZawodnikow();
+            //Zawodnik[] zawodnicy = WczytajZawodnikow();
 
             int sum = 0;
             kraj = kraj.ToLower();

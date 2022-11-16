@@ -16,8 +16,13 @@ namespace P02ZadanieZawodnicy
 
             List<string> bledneWiersze =mz.BlednieSformatowaneWiersze;
 
-        //    mz.BlednieSformatowaneWiersze = new List<string>{ "hej", "ala" };
+            //    mz.BlednieSformatowaneWiersze = new List<string>{ "hej", "ala" };
 
+            string kraj = "pol";
+            int liczbaZawodnikow = mz.PodajLiczbeZawodnikow(kraj);
+            Console.WriteLine(
+                $"Liczba zawodnikow z kraju {kraj} wynosi : {liczbaZawodnikow}"
+                );
 
             foreach (var z in zawodnicy)
                 Console.WriteLine(z.Imie + " " + z.Kraj);
