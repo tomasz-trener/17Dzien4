@@ -66,5 +66,20 @@ namespace P02ZadanieZawodnicy
 
             return zawodnicy.ToArray();
         }
+
+
+        public int PodajLiczbeZawodnikow(string kraj)
+        {
+            Zawodnik[] zawodnicy = WczytajZawodnikow();
+
+            int sum = 0;
+            kraj = kraj.ToLower();
+
+            foreach (var z in zawodnicy)
+                if (z.Kraj.ToLower() == kraj)
+                    sum++;
+
+            return sum;
+        }
     }
 }
