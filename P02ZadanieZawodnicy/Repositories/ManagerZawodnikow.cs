@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace P02ZadanieZawodnicy.Repositories
 {
-    enum TypImportu
+    public enum TypImportu
     {
         Lokalny,
         Zdalny
     }
 
-    internal class ManagerZawodnikow
+    public class ManagerZawodnikow
     {
         // public List<string> BlednieSformatowaneWiersze { get;  }
 
@@ -120,7 +120,7 @@ namespace P02ZadanieZawodnicy.Repositories
 
             foreach (var k in kraje)
             {
-                Zawodnik[] zk = podajZawodnikow(k);
+                Zawodnik[] zk = PodajZawodnikow(k);
 
                 int suma = 0;
                 foreach (var z in zk)
@@ -152,7 +152,7 @@ namespace P02ZadanieZawodnicy.Repositories
             return kraje.ToArray();
         }
 
-        public Zawodnik[] podajZawodnikow(string kraj)
+        public Zawodnik[] PodajZawodnikow(string kraj)
         {
             List<Zawodnik> zawodnicy = new List<Zawodnik>();
              

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P02ZadanieZawodnicy.Domain
 {
-    internal class GrupaKraj
+    public class GrupaKraj
     {
         public string NazwaKraju { get; set; }
         public double SredniWzrost { get; set; }
