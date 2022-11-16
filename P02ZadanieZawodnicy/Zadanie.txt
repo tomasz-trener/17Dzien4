@@ -13,4 +13,5 @@ ktora udostepnia nastepujace metody:
 - PodajSredniWzrostZawodnikowDlaKazdegoKraju ()
 - PodajLiczbeZawodnikowZDanegoKraju(kraj)
 
+
 Klasa ManagerZawodnikow pozwala na import danych, zarowno z pliku lokalnego jak i zdalnego 
