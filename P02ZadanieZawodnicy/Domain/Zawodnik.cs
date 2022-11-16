@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P02ZadanieZawodnicy
+namespace P02ZadanieZawodnicy.Domain
 {
     internal class Zawodnik
     {
