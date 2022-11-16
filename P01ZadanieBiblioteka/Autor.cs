@@ -8,5 +8,9 @@ namespace P01ZadanieBiblioteka
 {
     internal class Autor
     {
+        public  string Imie { get; set; }
+        public  string Nazwisko { get; set; }
+        public  string DrugieImie { get; set; }
+        public  Karta Karta { get; set; }
     }
 }

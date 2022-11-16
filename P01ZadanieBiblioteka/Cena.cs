@@ -8,5 +8,7 @@ namespace P01ZadanieBiblioteka
 {
     internal class Cena
     {
+        public  double CenaWlasciwa { get; set; }
+        public  string Komentarz { get; set; }
     }
 }
