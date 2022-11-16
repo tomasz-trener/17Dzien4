@@ -3,3 +3,14 @@
 Wczytaj z http://tomaszles.pl/wp-content/uploads/2019/06/zawodnicy.txt
 
 dane do tablicy typu Zawodnik
+
+
+Dodaj klasę ManagerZawodnikow, 
+
+ktora udostepnia nastepujace metody:
+
+- WczytajZawodnikow ()
+- PodajSredniWzrostZawodnikowDlaKazdegoKraju ()
+- PodajLiczbeZawodnikowZDanegoKraju(kraj)
+
+Klasa ManagerZawodnikow pozwala na import danych, zarowno z pliku lokalnego jak i zdalnego 

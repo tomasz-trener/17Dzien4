@@ -50,7 +50,7 @@ namespace P02ZadanieZawodnicy
                     continue;
                 }
 
-                // zawodnicy[i - 1] = z;
+                //zawodnicy[i - 1] = z;
                 zawodnicy.Add(z);
             }
 
