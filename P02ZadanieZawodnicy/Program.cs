@@ -30,6 +30,14 @@ namespace P02ZadanieZawodnicy
             if (bledneWiersze.Count>0)
                 Console.WriteLine(string.Join("\n", bledneWiersze));
 
+
+            Console.WriteLine("-------------------");
+
+            GrupaKraj[] gk= mz.PodajSredniWzrost();
+            foreach (var g in gk)
+                Console.WriteLine($"Średni wzrost w kraju {g.NazwaKraju} wynosi {g.SredniWzrost}");
+
+
             Console.ReadKey();
 
         }

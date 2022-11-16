@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -15,7 +16,7 @@ namespace P02ZadanieZawodnicy
         public List<string> BlednieSformatowaneWiersze
         {
             get { return blednieSformatowaneWiersze; }
-           // set { blednieSformatowaneWiersze = value; }
+            // set { blednieSformatowaneWiersze = value; }
         }
 
         private Zawodnik[] zawodnicy;
@@ -84,5 +85,59 @@ namespace P02ZadanieZawodnicy
 
             return sum;
         }
+
+        public GrupaKraj[] PodajSredniWzrost()
+        {
+            string[] kraje = podajKraje();
+
+            List<GrupaKraj> gk = new List<GrupaKraj>();
+
+            foreach (var k in kraje)
+            {
+                Zawodnik[] zk = podajZawodnikow(k);
+
+                int suma = 0;
+                foreach (var z in zk)
+                    suma += z.Wzrost;
+
+                gk.Add(new GrupaKraj()
+                {
+                    NazwaKraju = k,
+                    SredniWzrost = Convert.ToDouble(suma) / zk.Length
+                });
+
+            }
+
+            return gk.ToArray();
+
+        }
+
+        /// <summary>
+        /// Zwraca unikalna kolekcje krajow 
+        /// </summary>
+        /// <returns></returns>
+        private string[] podajKraje()
+        {
+            List<string> kraje = new List<string>();
+            foreach (var z in zawodnicy)
+                if (!kraje.Contains(z.Kraj.ToLower()))
+                    kraje.Add(z.Kraj.ToLower());
+
+            return kraje.ToArray();
+        }
+
+        public Zawodnik[] podajZawodnikow(string kraj)
+        {
+            List<Zawodnik> zawodnicy = new List<Zawodnik>();
+
+            kraj = kraj.ToLower();
+
+            foreach (var z in this.zawodnicy)
+                if (z.Kraj.ToLower() == kraj)
+                    zawodnicy.Add(z);
+            return zawodnicy.ToArray();
+
+        }
+
     }
 }
