@@ -1,13 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace P02ZadanieZawodnicy
 {
+    enum TypImportu
+    {
+        Lokalny,
+        Zdalny
+    }
+
     internal class ManagerZawodnikow
     {
         // public List<string> BlednieSformatowaneWiersze { get;  }
@@ -19,16 +27,32 @@ namespace P02ZadanieZawodnicy
             // set { blednieSformatowaneWiersze = value; }
         }
 
+        public TypImportu TypImportu { get; }
+        public string Path { get; }
+
         private Zawodnik[] zawodnicy;
 
+        public ManagerZawodnikow(TypImportu typImportu, string path)
+        {
+            TypImportu = typImportu;
+            Path = path;
+        }
 
         public Zawodnik[] WczytajZawodnikow()
         {
-            string url = "http://tomaszles.pl/wp-content/uploads/2019/06/zawodnicy.txt";
+            // string url = "http://tomaszles.pl/wp-content/uploads/2019/06/zawodnicy.txt";
 
-            WebClient wc = new WebClient();
-            string wiersze = wc.DownloadString(url);
-
+            string wiersze;
+            if (TypImportu == TypImportu.Zdalny)
+            {
+                WebClient wc = new WebClient();
+                wiersze = wc.DownloadString(Path);
+            }
+            else if (TypImportu == TypImportu.Lokalny)
+                wiersze = File.ReadAllText(Path);
+            else
+                throw new Exception("Nieznany typ importu");
+       
             string[] tabWierszy = wiersze.Split(new string[1] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             // Zawodnik[] zawodnicy = new Zawodnik[tabWierszy.Length - 1];

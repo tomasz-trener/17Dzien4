@@ -11,7 +11,8 @@ namespace P02ZadanieZawodnicy
     {
         static void Main(string[] args)
         {
-            ManagerZawodnikow mz = new ManagerZawodnikow();
+            string url = "http://tomaszles.pl/wp-content/uploads/2019/06/zawodnicy.txt";
+            ManagerZawodnikow mz = new ManagerZawodnikow(TypImportu.Zdalny, url);
             Zawodnik[] zawodnicy= mz.WczytajZawodnikow();
 
             List<string> bledneWiersze =mz.BlednieSformatowaneWiersze;
@@ -35,9 +36,15 @@ namespace P02ZadanieZawodnicy
 
             GrupaKraj[] gk= mz.PodajSredniWzrost();
             foreach (var g in gk)
-                Console.WriteLine($"Średni wzrost w kraju {g.NazwaKraju} wynosi {g.SredniWzrost}");
+            {
+                // string s= $"Średni wzrost w kraju {g.NazwaKraju} wynosi {Math.Round(g.SredniWzrost,2)}";
+                string s = string.Format("Średni wzrost w kraju {0} wynosi {1:00.00}", g.NazwaKraju, g.SredniWzrost);
 
+                Console.WriteLine(s);
+            }
 
+            string s1 =  String.Format("{0:n}", 1234);
+            Console.WriteLine(s1);
             Console.ReadKey();
 
         }

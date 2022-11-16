@@ -14,4 +14,5 @@ ktora udostepnia nastepujace metody:
 - PodajLiczbeZawodnikowZDanegoKraju(kraj)
 
 
-Klasa ManagerZawodnikow pozwala na import danych, zarowno z pliku lokalnego jak i zdalnego 
+Klasa ManagerZawodnikow pozwala na import danych,
+zarowno z pliku lokalnego jak i zdalnego 
