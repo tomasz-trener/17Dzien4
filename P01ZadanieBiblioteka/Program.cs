@@ -10,7 +10,7 @@ namespace P01ZadanieBiblioteka
     {
         static void Main(string[] args)
         {
-
+             
         }
     }
 }
