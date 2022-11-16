@@ -22,14 +22,14 @@ namespace P02ZadanieZawodnicy.Repositories
     {
         // public List<string> BlednieSformatowaneWiersze { get;  }
 
-        private List<string> blednieSformatowaneWiersze;
-        public List<string> BlednieSformatowaneWiersze
+        private List<string> blednieSformatowaneWiersze; // pole 
+        public List<string> BlednieSformatowaneWiersze // właściwość
         {
             get { return blednieSformatowaneWiersze; }
             // set { blednieSformatowaneWiersze = value; }
         }
 
-        public TypImportu TypImportu { get; }
+        public TypImportu TypImportu { get; } // z zewnatrz tylko do odczytu 
         public string Path { get; }
 
         private Zawodnik[] zawodnicy;
