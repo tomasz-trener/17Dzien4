@@ -16,6 +16,9 @@ namespace P02ZadanieZawodnicy
 
             List<string> bledneWiersze =mz.BlednieSformatowaneWiersze;
 
+        //    mz.BlednieSformatowaneWiersze = new List<string>{ "hej", "ala" };
+
+
             foreach (var z in zawodnicy)
                 Console.WriteLine(z.Imie + " " + z.Kraj);
             

@@ -9,7 +9,15 @@ namespace P02ZadanieZawodnicy
 {
     internal class ManagerZawodnikow
     {
-        public List<string> BlednieSformatowaneWiersze;
+        // public List<string> BlednieSformatowaneWiersze { get;  }
+
+        private List<string> blednieSformatowaneWiersze;
+        public List<string> BlednieSformatowaneWiersze
+        {
+            get { return blednieSformatowaneWiersze; }
+           // set { blednieSformatowaneWiersze = value; }
+        }
+
 
         public Zawodnik[] WczytajZawodnikow()
         {
@@ -22,7 +30,7 @@ namespace P02ZadanieZawodnicy
 
             // Zawodnik[] zawodnicy = new Zawodnik[tabWierszy.Length - 1];
 
-            BlednieSformatowaneWiersze = new List<string>();
+            blednieSformatowaneWiersze = new List<string>();
             List<Zawodnik> zawodnicy = new List<Zawodnik>();
 
             for (int i = 1; i < tabWierszy.Length; i++)
@@ -48,7 +56,7 @@ namespace P02ZadanieZawodnicy
                 }
                 catch (Exception)
                 {
-                    BlednieSformatowaneWiersze.Add(tabWierszy[i]);
+                    blednieSformatowaneWiersze.Add(tabWierszy[i]);
                     continue;
                 }
 
