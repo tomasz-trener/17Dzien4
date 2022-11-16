@@ -48,7 +48,7 @@ namespace P02ZadanieZawodnicy
                 }
                 catch (Exception)
                 {
-                    blednieSformatowaneWiersze.Add(tabWierszy[i]);
+                    BlednieSformatowaneWiersze.Add(tabWierszy[i]);
                     continue;
                 }
 
