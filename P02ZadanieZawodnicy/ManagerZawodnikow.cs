@@ -129,7 +129,7 @@ namespace P02ZadanieZawodnicy
         public Zawodnik[] podajZawodnikow(string kraj)
         {
             List<Zawodnik> zawodnicy = new List<Zawodnik>();
-
+             
             kraj = kraj.ToLower();
 
             foreach (var z in this.zawodnicy)
